@@ -37,19 +37,14 @@ public class SendActivity : AppCompatActivity() {
         when (item.getItemId()) {
             R.id.menu_action_about -> {
                 val builder = AlertDialog.Builder(this);
-
                 with(builder) {
-
                     setMessage(R.string.about_alert_text)
-
                     setTitle(R.string.about_alert_title)
-
                     setPositiveButton(R.string.about_alert_other_progs, { dialogInterface, button ->
                         val browseIntent2 = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9+%D0%9C%D0%BE%D0%B8%D1%81%D0%B5%D0%B5%D0%B2"))
                         startActivity(browseIntent2)
                     })
                 }
-
                 builder.create().show();
             }
         }
@@ -63,14 +58,13 @@ public class SendActivity : AppCompatActivity() {
         editText.setText(getIntent().getStringExtra(Intent.EXTRA_TEXT));
 
         buttonSend.setOnClickListener {
-            var text = editText.getText().toString();
-            if (text.length()==0)
-            {
+            val text = editText.getText().toString();
+            if (text.length() == 0) {
                 alertError(R.string.error_empty_text);
                 return@setOnClickListener;
             }
 
-            val bitmap=writeTextToImage(text, Size(460, 780),36,10);
+            val bitmap = writeTextToImage(text, Size(460, 780), 36, 10);
 
             try {
                 val cachePath = File(getExternalCacheDir(), "temp");
@@ -81,16 +75,13 @@ public class SendActivity : AppCompatActivity() {
                 stream.close();
 
                 val builder = AlertDialog.Builder(this);
+                val imageView = ImageView(this);
 
-                var imageView = ImageView(this);
                 imageView.setImageBitmap(bitmap);
 
                 with(builder) {
-
                     setView(imageView)
-
                     setTitle(R.string.preview_alert_title)
-
                     setPositiveButton(R.string.preview_alert_ok, { dialogInterface, button ->
                         val shareIntent = Intent();
                         shareIntent.setAction(Intent.ACTION_SEND);
@@ -99,7 +90,6 @@ public class SendActivity : AppCompatActivity() {
                         startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.app_name)));
                         finish();
                     })
-
                     setNegativeButton(R.string.preview_alert_cancel, { dialogInterface, button -> })
                 }
 
@@ -115,7 +105,7 @@ public class SendActivity : AppCompatActivity() {
         };
     }
 
-    fun alertError(text:String){
+    fun alertError(text: String) {
         val builder = AlertDialog.Builder(this);
         with(builder) {
             setTitle(R.string.error_title)
@@ -125,7 +115,7 @@ public class SendActivity : AppCompatActivity() {
         builder.create().show();
     }
 
-    fun alertError(resourceId:Int){
+    fun alertError(resourceId: Int) {
         alertError(getString(resourceId))
     }
 }
