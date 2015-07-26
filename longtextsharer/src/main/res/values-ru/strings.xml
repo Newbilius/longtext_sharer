@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Длинно-текстовик</string>
+    <string name="send_button_title">Отправить</string>
+    <string name="menu_action_about">О программе</string>
+    <string name="about_alert_text">Автор программы: Моисев Дмитрий aka Newbilius</string>
+    <string name="about_alert_title">О программе</string>
+    <string name="about_alert_other_progs">Другие приложения автора</string>
+    <string name="preview_alert_title">Примерное превью</string>
+    <string name="preview_alert_ok">Отправляем!</string>
+    <string name="preview_alert_cancel">Да ну нафиг...</string>
+    <string name="ok">Ну ок...</string>
+    <string name="error_empty_text">Что бы расшарить что-то ненужное, нужно сначала написать нечто ненужное... А у нас тут текста не наблюдается!</string>
+    <string name="error_title">Ошибка</string>
+    <string name="error_iofile">Не удалось записать файл :-(</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Long-text sharer</string>
+    <string name="send_button_title">Send</string>
+    <string name="menu_action_about">About</string>
+    <string name="about_alert_text">Author: Moiseev Dmitry aka Newbilius</string>
+    <string name="about_alert_title">About</string>
+    <string name="about_alert_other_progs">Other applications of the author</string>
+    <string name="preview_alert_title">Preview</string>
+    <string name="preview_alert_ok">Send</string>
+    <string name="preview_alert_cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="error_empty_text">Cant send empty text.</string>
+    <string name="error_iofile">Something wrong with SD-card :-(</string>
+    <string name="error_title">Error</string>
+</resources>
