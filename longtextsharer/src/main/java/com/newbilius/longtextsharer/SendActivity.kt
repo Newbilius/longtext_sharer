@@ -64,7 +64,7 @@ public class SendActivity : AppCompatActivity() {
                 return@setOnClickListener;
             }
 
-            val bitmap = writeTextToImage(text, Size(460, 780), 36, 10);
+            val bitmap = writeTextToImage(text, 460 x 780, 36, 10);
 
             try {
                 val cachePath = File(getExternalCacheDir(), "temp");
