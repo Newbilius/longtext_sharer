@@ -1,4 +1,6 @@
-# Example of using Kotlin and Gradle
+#Превращает текст любой длины в картинку для последующего поста в Twitter
 
-Application in Google Play:
+Моя первая попытка пощупать Kotlin и Gradle
+
+Приложения в Google Play:
 https://play.google.com/store/apps/details?id=com.newbilius.longtextsharer
